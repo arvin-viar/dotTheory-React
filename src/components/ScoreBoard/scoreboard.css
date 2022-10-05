@@ -154,16 +154,16 @@ svg {
   font-weight: normal;
 }
 
-  .stats td:first-child {
-    text-align: right;
-    font-weight: normal;
-    letter-spacing: 2px;
-    font-size: .7em;
-  }
+.stats td:first-child {
+  text-align: right;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: .7em;
+}
 
-  .stats td:last-child {
-    text-align: left;
-  }
+.stats td:last-child {
+  text-align: left;
+}
 
 .stopwatch {
   padding: 15px 10px 5px 10px;
@@ -171,38 +171,38 @@ svg {
   background: #5B45B9;
 }
 
-  .stopwatch-time {
-    display: block;
-    font-family: monospace;
-    font-size: 2.15em;
-  }
+.stopwatch-time {
+  display: block;
+  font-family: monospace;
+  font-size: 2.15em;
+}
 
-  .stopwatch button {
-    margin: 8px 5px;
-    background-color: #44338D;
-    border-radius: 5px;
-    padding: 7px 8px;
-    border: none;
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-shadow: none;
-    text-transform: uppercase;
-  }
+.stopwatch button {
+  margin: 8px 5px;
+  background-color: #44338D;
+  border-radius: 5px;
+  padding: 7px 8px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+}
 
-  .stopwatch button:hover,
-  input[type=submit]:hover {
-    background: #fff;
-    color: #44338D;
-    cursor: pointer;
-  }
+.stopwatch button:hover,
+input[type=submit]:hover {
+  background: #fff;
+  color: #44338D;
+  cursor: pointer;
+}
 
-  .stopwatch h2 {
-    font-size: .6em;
-    margin: 0;
-    font-weight: normal;
-    letter-spacing: 2px;
-  }
+.stopwatch h2 {
+  font-size: .6em;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
 
 .counter {
   display: flex;

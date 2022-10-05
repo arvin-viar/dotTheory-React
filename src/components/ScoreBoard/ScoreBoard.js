@@ -30,7 +30,7 @@ class ScoreBoard extends Component {
   handleRemovePlayer = (id) => {
     this.setState( prevState => {
       return {
-        players: prevState.players.filter(p => p.id !== id)
+        players: prevState.players.filter(player => player.id !== id)
       };
     });
   }
@@ -53,7 +53,7 @@ class ScoreBoard extends Component {
         )}
       </div>
     );
-  };
+  }
 }
 
 export default ScoreBoard;
