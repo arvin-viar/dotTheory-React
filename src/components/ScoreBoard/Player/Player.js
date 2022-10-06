@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Counter from "../Counter/Counter";
 
-const Player = (props) => (
+const Player = ({ id, name, removePlayer }) => (
   <div className="player">
     <span className="player-name">
       <button
         className="remove-player"
-        onClick={() => props.removePlayer(props.id)}
+        onClick={() => removePlayer(id)}
       >
         ✖
       </button>
-      { props.name }
+      { name }
     </span>
 
     <Counter />
