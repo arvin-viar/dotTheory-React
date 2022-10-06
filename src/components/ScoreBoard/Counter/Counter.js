@@ -23,14 +23,20 @@ class Counter extends Component {
         <button
           className="counter-action decrement"
           onClick={this.decrementScore}
-        > - </button>
+        >
+          -
+        </button>
+
         <span className="counter-score">
           { this.state.score }
         </span>
+
         <button
           className="counter-action increment"
           onClick={this.incrementScore}
-        > + </button>
+        >
+          +
+        </button>
       </div>
     );
   }
