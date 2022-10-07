@@ -1,7 +1,5 @@
-.score-board {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
+/* ELEMENT STYLES -------------------- */
+body {
   background: #e8e7e7;
   font-family: arial;
   text-transform: uppercase;
