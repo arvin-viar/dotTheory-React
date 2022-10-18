@@ -15,7 +15,7 @@ const Teachers = () => {
   return (
     <div className="main-content">
       <h2>Teachers</h2>
-      <ul className="group">
+      <ul className="group teachers">
         {teachers}
       </ul>
     </div>

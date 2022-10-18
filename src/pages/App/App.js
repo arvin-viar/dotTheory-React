@@ -9,9 +9,10 @@ import {
 import HomePage from "../Home/Home";
 import ScoreBoardPage from "../Scoreboard";
 import RouterCourse from "../RouterCourse";
+import WhatsNew from "../WhatsNew";
 import NotFound from "../NotFound";
 
-import './App.css';
+import './App.scss';
 
 const App = () => {
   return (
@@ -62,6 +63,10 @@ const App = () => {
               />
             </Route>
           </Route>
+          <Route
+            path="/whatsnew"
+            element={<WhatsNew />}
+          />
           <Route
             path="*"
             element={<NotFound />}
