@@ -65,8 +65,13 @@ const App = () => {
           </Route>
           <Route
             path="/whatsnew"
-            element={<WhatsNew />}
-          />
+          >
+            <Route index element={<Navigate to="/whatsnew/component-did-catch" />} />
+            <Route path="component-did-catch" element={<WhatsNew page="component-did-catch"/>} />
+            <Route path="error-boundaries" element={<WhatsNew page="error-boundaries"/>} />
+            <Route path="portals" element={<WhatsNew page="portals"/>} />
+            <Route path="set-state" element={<WhatsNew page="set-state"/>} />
+          </Route>
           <Route
             path="*"
             element={<NotFound />}

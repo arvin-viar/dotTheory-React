@@ -21,26 +21,6 @@
     border-color: rgba(0,0,0, .1);
   }
 
-  .container {
-    width: 100%;
-    max-width: 960px;
-    padding-bottom: 2em;
-    margin: 0 auto 2em;
-    background: #fff;
-    border-radius: .5em;
-    box-shadow: 0 3px rgba(0,0,0, .1);
-    overflow: hidden;
-  }
-
-  header {
-    background: #edeff0;
-    margin-bottom: 2em;
-  }
-
-  .main-content {
-    padding: 1em 2em;
-  }
-
   .group {
     &:after {
       content: "";
@@ -104,26 +84,6 @@
     text-align: center;
   }
 
-  .main-nav {
-    width: 100%;
-
-    a {
-      font-size: .95em;
-      color: #222;
-      text-align: center;
-      text-transform: uppercase;
-      display: block;
-      padding: 1em;
-      transition: .2s;
-
-      &:hover,
-      &.active {
-        color: #fff;
-        background: #3b80d1;
-      }
-    }
-  }
-
   .icn {
     &-logo {
       background: #54606b;
@@ -159,17 +119,6 @@
         width: 100%;
         text-align: center;
         padding-bottom: 4px;
-      }
-    }
-
-    .main-nav {
-      a {
-        border-top: 2px solid transparent;
-        border-bottom: 2px solid transparent;
-
-        &:hover {
-          border-color: rgba(0,0,0, .1);
-        }
       }
     }
 
