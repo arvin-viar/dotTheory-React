@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './pages/App/App';
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { Provider } from './components/ScoreBoard/Context';
+import App from './pages/App/App';
+import './index.css';
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
+  <Provider>
     <App />
-  </React.StrictMode>
+  </Provider>
 );
