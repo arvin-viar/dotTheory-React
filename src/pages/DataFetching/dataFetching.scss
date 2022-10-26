@@ -1,0 +1,58 @@
+.page-data-fetching {
+  button {
+    font-size: 1em;
+    color: white;
+    padding: 1em;
+    border: 0;
+    margin-left: 20px;
+    outline: none;
+    background-color: #4ec5e6;
+    cursor: pointer;
+  }
+
+  .photos {
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 2%;
+      row-gap: 12px;
+
+      .item {
+        flex-grow: 1;
+        width: 32%;
+
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .form-container {
+    text-align: left;
+
+    .search-form {
+      margin-bottom: 24px;
+
+      label {
+        margin-right: 16px;
+      }
+
+      input {
+        font-size: 1.12em;
+        height: 46px;
+        padding-left: 0;
+        background: none;
+        border: none;
+        outline: 0;
+        border-bottom: 4px solid #e4e4e4;
+        transition: border-color .4s;
+
+        &:focus {
+          border-color: #c1c1c1;
+        }
+      }
+    }
+  }
+}

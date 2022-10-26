@@ -25,6 +25,11 @@ const HomePage = () => (
             What's New in React
           </Link>
         </li>
+        <li>
+          <Link to="/datafetching">
+            Data Fetching in React
+          </Link>
+        </li>
       </ul>
     </div>
   </div>

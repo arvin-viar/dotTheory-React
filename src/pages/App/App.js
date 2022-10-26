@@ -10,6 +10,7 @@ import HomePage from "../Home/Home";
 import ScoreBoardPage from "../Scoreboard";
 import RouterCourse from "../RouterCourse";
 import WhatsNew from "../WhatsNew";
+import DataFetching from "../DataFetching";
 import NotFound from "../NotFound";
 
 import './App.scss';
@@ -71,6 +72,14 @@ const App = () => {
             <Route path="error-boundaries" element={<WhatsNew page="error-boundaries"/>} />
             <Route path="portals" element={<WhatsNew page="portals"/>} />
             <Route path="set-state" element={<WhatsNew page="set-state"/>} />
+          </Route>
+          <Route
+            path="/datafetching"
+          >
+            <Route index element={<Navigate to="/datafetching/fetch-api" />} />
+            <Route path="fetch-api" element={<DataFetching page="fetch-api"/>} />
+            <Route path="axios" element={<DataFetching page="axios"/>} />
+            <Route path="search" element={<DataFetching page="search"/>} />
           </Route>
           <Route
             path="*"
