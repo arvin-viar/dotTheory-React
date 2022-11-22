@@ -16,8 +16,8 @@ const HomePage = () => (
           </Link>
         </li>
         <li>
-          <Link to="/">
-            Lorem Ipsum
+          <Link to="/routercourse">
+            Router Course
           </Link>
         </li>
         <li>
