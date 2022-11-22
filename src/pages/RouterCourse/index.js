@@ -8,26 +8,23 @@ import Courses from "../../components/RouterCourse/Courses";
 
 import './routercourse.css';
 
-const RouterCoursePage = ({page, course}) => (
-  <div className="page page-router-course">
-    <section>
-      <div className="container">
-        <Header />
-        {page === "home" && (
-          <Home />
-        )}
-        {page === "about" && (
-          <About />
-        )}
-        {page === "teachers" && (
-          <Teachers />
-        )}
-        {page === "courses" && (
-          <Courses course={course} />
-        )}
-      </div>
-    </section>
-  </div>
-);
+const RouterCoursePage = ({page, course}) => {
+  const componentMap = {
+    home: <Home />,
+    about: <About />,
+    teachers: <Teachers />,
+    courses: <Courses course={course} />,
+  };
+  return (
+    <div className="page page-router-course">
+      <section>
+        <div className="container">
+          <Header />
+          {componentMap[page]}
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default RouterCoursePage;
