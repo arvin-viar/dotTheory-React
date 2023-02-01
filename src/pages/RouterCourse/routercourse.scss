@@ -1,0 +1,228 @@
+.page-router-course {
+  padding: 24px;
+
+  input,
+  button {
+    padding: .5em;
+    font-size: .9em;
+    margin-right: 10px;
+    border: none;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    outline: none;
+  }
+
+  button {
+    color: white;
+    background: #4188dc;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+    border-color: rgba(0,0,0, .1);
+  }
+
+  .group {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .course {
+    margin-bottom: 1em;
+
+    &-header {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+
+    &-nav {
+      li {
+        display: inline-block;
+
+        & + li {
+          margin-left: .6em;
+        }
+      }
+      a {
+        font-size: .85em;
+        color: #7d7d7d;
+        padding: .2em .8em;
+        border-radius: .25em;
+        background: #eaebeb;
+        transition: .2s;
+
+        &:hover,
+        &.active {
+          color: #fff;
+          background: #39add1;
+        }
+      }
+    }
+
+    &-img {
+      width: 70px;
+    }
+  }
+
+  .teachers {
+    display: flex;
+    flex-direction: column;
+
+    .teacher {
+      width: 100%;
+
+      &-img {
+        width: 100%;
+        border-radius: .3em;
+      }
+    }
+  }
+
+  .not-found {
+    text-align: center;
+  }
+
+  .icn {
+    &-logo {
+      background: #54606b;
+      color: #fff;
+
+      i {
+        font-size: 2.45em;
+        line-height: 0;
+        margin-top: 30px;
+      }
+    }
+
+    &-error {
+      font-size: 3.2em;
+      margin-bottom: .25em;
+    }
+  }
+
+  /* =================================
+    MEDIA QUERIES
+  ==================================== */
+
+  @media (min-width: 0) and (max-width: 768px) {
+    .home {
+      a {
+        border-color: transparent;
+      }
+    }
+
+    .icn {
+      &-logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 4px;
+      }
+    }
+
+    .courses {
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    .course {
+      &-nav {
+        display: block;
+        margin: 1.5em 0 3.2em;
+      }
+    }
+
+    input,
+    button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  }
+
+  @media (min-width: 769px) {
+    padding: 100px;
+
+    .home {
+      a {
+        border-color: #3b80d1;
+      }
+    }
+
+    .media {
+      & > div,
+      .teacher {
+        float: left;
+      }
+
+      & > div {
+        width: 85.1%;
+        margin-left: 1.5em;
+      }
+    }
+
+    .course {
+      display: flex;
+      align-items: center;
+
+      &-img {
+        width: auto;
+        max-width: 20%;
+        height: auto;
+        margin: 16px;
+      }
+    }
+
+    .teachers {
+      column-gap: 20px;
+      row-gap: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .teacher {
+        flex-basis: 100%;
+        flex: 1 1 48%;
+
+        &-img {
+          width: 100%;
+          border-radius: .3em;
+        }
+      }
+    }
+
+    .icn-logo {
+      margin-right: auto;
+      padding: 0 2em;
+    }
+
+    header,
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        padding: 1.25em 1.5em;
+
+        &:hover {
+          border-color: rgba(0,0,0, .1);
+        }
+      }
+    }
+
+    .course {
+      &-nav {
+        float: right;
+
+        h2 {
+          float: left;
+        }
+      }
+    }
+  }
+}
