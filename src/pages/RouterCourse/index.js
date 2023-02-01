@@ -9,24 +9,20 @@ import BackToHome from "../../components/BackToHome";
 
 import './routercourse.scss';
 
+const componentMap = {
+  home: () => <Home />,
+  about: () => <About />,
+  teachers: () => <Teachers />,
+  courses: (course) => <Courses course={course} />,
+};
+
 const RouterCoursePage = ({page, course}) => (
   <div className="page page-router-course">
     <BackToHome />
     <section>
       <div className="container">
         <Header />
-        {page === "home" && (
-          <Home />
-        )}
-        {page === "about" && (
-          <About />
-        )}
-        {page === "teachers" && (
-          <Teachers />
-        )}
-        {page === "courses" && (
-          <Courses course={course} />
-        )}
+        {componentMap[page](course)}
       </div>
     </section>
   </div>

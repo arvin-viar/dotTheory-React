@@ -14,54 +14,52 @@ import NotFound from "../NotFound";
 
 import './App.scss';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Router>
-        <Routes>
+const App = () => (
+  <div className="App">
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+        <Route
+          path="/scoreboard"
+          element={<ScoreBoardPage />}
+        />
+        <Route
+          path="/routercourse"
+        >
+          <Route index element={<Navigate to="/routercourse/home" />} />
+          <Route path="home" element={<RouterCourse page="home"/>} />
+          <Route path="about" element={<RouterCourse page="about"/>} />
+          <Route path="teachers" element={<RouterCourse page="teachers"/>} />
           <Route
-            path="/"
-            element={<HomePage />}
-          />
-          <Route
-            path="/scoreboard"
-            element={<ScoreBoardPage />}
-          />
-          <Route
-            path="/routercourse"
+            path="courses"
           >
-            <Route index element={<Navigate to="/routercourse/home" />} />
-            <Route path="home" element={<RouterCourse page="home"/>} />
-            <Route path="about" element={<RouterCourse page="about"/>} />
-            <Route path="teachers" element={<RouterCourse page="teachers"/>} />
             <Route
-              path="courses"
-            >
-              <Route
-                index
-                element={
-                  <Navigate to="/routercourse/courses/html" />
-                }
-              />
-              <Route
-                path="html"
-                element={
-                  <RouterCourse page="courses" course="html" />
-                }
-              />
-              <Route
-                path="css"
-                element={
-                  <RouterCourse page="courses" course="css" />
-                }
-              />
-              <Route
-                path="javascript"
-                element={
-                  <RouterCourse page="courses" course="javascript" />
-                }
-              />
-            </Route>
+              index
+              element={
+                <Navigate to="/routercourse/courses/html" />
+              }
+            />
+            <Route
+              path="html"
+              element={
+                <RouterCourse page="courses" course="html" />
+              }
+            />
+            <Route
+              path="css"
+              element={
+                <RouterCourse page="courses" course="css" />
+              }
+            />
+            <Route
+              path="javascript"
+              element={
+                <RouterCourse page="courses" course="javascript" />
+              }
+            />
           </Route>
           <Route
             path="/whatsnew"
@@ -76,10 +74,10 @@ const App = () => {
             path="*"
             element={<NotFound />}
           />
-        </Routes>
-      </Router>
-    </div>
-  );
-}
+        </Route>
+      </Routes>
+    </Router>
+  </div>
+);
 
 export default App;
