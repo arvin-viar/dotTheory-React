@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import Modal from "../../Modals";
-import "./portal.scss";
 
 const Portals = () => {
   const [isModal, setIsModal] = useState(false);

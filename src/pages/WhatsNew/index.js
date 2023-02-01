@@ -9,24 +9,21 @@ import Header from "../../components/WhatsNew/Header";
 
 import "./whatsnew.scss"
 
+const pagesDataMap = {
+  componentdidcatch: <ComponentDidCatch />,
+  errorboundaries: <ErrorBoundaries />,
+  portals: <Portals />,
+  setstate: <SetState />,
+};
+
+
 const WhatsNew = ({ page }) => (
   <div className="page page-whatsnew">
     <BackToHome />
     <section>
       <div className="container">
         <Header />
-        {page === "component-did-catch" && (
-          <ComponentDidCatch />
-        )}
-        {page === "error-boundaries" && (
-          <ErrorBoundaries />
-        )}
-        {page === "portals" && (
-          <Portals />
-        )}
-        {page === "set-state" && (
-          <SetState />
-        )}
+        {pagesDataMap[page.replaceAll('-', '')]}
       </div>
     </section>
   </div>
