@@ -4,6 +4,12 @@ import { NavLink } from 'react-router-dom';
 import CourseContainer from './CourseContainer';
 import { HTMLCourses, CSSCourses, JSCourses } from '../data/Courses';
 
+const courseDataMap = {
+  html: HTMLCourses,
+  css: CSSCourses,
+  javascript: JSCourses,
+};
+
 const Courses = ({course}) => (
   <div className="main-content courses">
     <div className="course-header group">
@@ -33,15 +39,7 @@ const Courses = ({course}) => (
       </ul>
     </div>
 
-    {course === "html" && (
-      <CourseContainer data={HTMLCourses} />
-    )}
-    {course === "css" && (
-      <CourseContainer data={CSSCourses} />
-    )}
-    {course === "javascript" && (
-      <CourseContainer data={JSCourses} />
-    )}
+    <CourseContainer data={courseDataMap[course]} />
   </div>
 );
 
