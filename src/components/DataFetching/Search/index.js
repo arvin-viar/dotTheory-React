@@ -50,7 +50,7 @@ const Search = ({title}) => {
     <div className="content-wrapper">
       <PageHeader title={title} />
 
-      {isLoading === true ? (
+      {isLoading ? (
         <div className="content-loader">
           Content is loading...
         </div>

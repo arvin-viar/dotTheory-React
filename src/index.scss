@@ -105,7 +105,7 @@ code {
     }
   }
 
-  @media (min-width: 0) and (max-width: 768px) {
+  @media (max-width: 768px) {
     .main-nav {
       a {
         border-top: 2px solid transparent;

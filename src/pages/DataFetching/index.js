@@ -8,41 +8,39 @@ import Search from "../../components/DataFetching/Search";
 
 import "./dataFetching.scss"
 
-const DataFetching = ({ page }) => {
-  const navData = [
-    {
-      path: "/datafetching/fetch-api",
-      title: "Fetch API"
-    },
-    {
-      path: "/datafetching/axios",
-      title: "Axios"
-    },
-    {
-      path: "/datafetching/search",
-      title: "Search"
-    },
-  ];
+const navData = [
+  {
+    path: "/datafetching/fetch-api",
+    title: "Fetch API"
+  },
+  {
+    path: "/datafetching/axios",
+    title: "Axios"
+  },
+  {
+    path: "/datafetching/search",
+    title: "Search"
+  },
+];
 
-  return (
-    <div className="page page-data-fetching">
-      <BackToHome />
-      <section>
-        <div className="container">
-          <PageNav navData={navData} />
-          {page === "fetch-api" && (
-            <FetchAPI title="Fetch API" />
-          )}
-          {page === "axios" && (
-            <Axios title="Axios" />
-          )}
-          {page === "search" && (
-            <Search title="Search" />
-          )}
-        </div>
-      </section>
-    </div>
-  );
-};
+const DataFetching = ({ page }) => (
+  <div className="page page-data-fetching">
+    <BackToHome />
+    <section>
+      <div className="container">
+        <PageNav navData={navData} />
+        {page === "fetch-api" && (
+          <FetchAPI title="Fetch API" />
+        )}
+        {page === "axios" && (
+          <Axios title="Axios" />
+        )}
+        {page === "search" && (
+          <Search title="Search" />
+        )}
+      </div>
+    </section>
+  </div>
+);
 
 export default DataFetching;
