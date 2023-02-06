@@ -9,9 +9,11 @@ import {
 import HomePage from "../Home/Home";
 import ScoreBoardPage from "../Scoreboard";
 import RouterCourse from "../RouterCourse";
+import WhatsNew from "../WhatsNew";
+import DataFetching from "../DataFetching";
 import NotFound from "../NotFound";
 
-import './App.css';
+import './App.scss';
 
 const App = () => (
   <div className="App">
@@ -60,6 +62,23 @@ const App = () => (
               }
             />
           </Route>
+        </Route>
+        <Route
+          path="/whatsnew"
+        >
+          <Route index element={<Navigate to="/whatsnew/component-did-catch" />} />
+          <Route path="component-did-catch" element={<WhatsNew page="component-did-catch"/>} />
+          <Route path="error-boundaries" element={<WhatsNew page="error-boundaries"/>} />
+          <Route path="portals" element={<WhatsNew page="portals"/>} />
+          <Route path="set-state" element={<WhatsNew page="set-state"/>} />
+        </Route>
+        <Route
+          path="/datafetching"
+        >
+          <Route index element={<Navigate to="/datafetching/fetch-api" />} />
+          <Route path="fetch-api" element={<DataFetching page="fetch-api"/>} />
+          <Route path="axios" element={<DataFetching page="axios"/>} />
+          <Route path="search" element={<DataFetching page="search"/>} />
         </Route>
         <Route
           path="*"

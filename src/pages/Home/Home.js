@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import './Home.css';
+import './Home.scss';
 
 const HomePage = () => (
   <div className="page page-home">
@@ -21,8 +21,13 @@ const HomePage = () => (
           </Link>
         </li>
         <li>
-          <Link to="/">
-            Dolor Sit Amet
+          <Link to="/whatsnew">
+            What's New in React
+          </Link>
+        </li>
+        <li>
+          <Link to="/datafetching">
+            Data Fetching in React
           </Link>
         </li>
       </ul>

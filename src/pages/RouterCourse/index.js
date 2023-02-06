@@ -5,8 +5,9 @@ import Home from "../../components/RouterCourse/Home";
 import About from "../../components/RouterCourse/About";
 import Teachers from "../../components/RouterCourse/Teachers";
 import Courses from "../../components/RouterCourse/Courses";
+import BackToHome from "../../components/BackToHome";
 
-import './routercourse.css';
+import './routercourse.scss';
 
 const componentMap = {
   home: () => <Home />,
@@ -17,6 +18,7 @@ const componentMap = {
 
 const RouterCoursePage = ({page, course}) => (
   <div className="page page-router-course">
+    <BackToHome />
     <section>
       <div className="container">
         <Header />

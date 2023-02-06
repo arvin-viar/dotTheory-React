@@ -4,7 +4,7 @@ import Header from "./Header";
 import PlayerList from "./PlayerList";
 import AddPlayer from "./AddPlayer";
 
-import './scoreboard.css';
+import './scoreboard.scss';
 
 const ScoreBoard = () => (
   <div className="scoreboard">

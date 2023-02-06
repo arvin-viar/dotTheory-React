@@ -1,0 +1,17 @@
+.set-state {
+  &__teachers {
+    margin-bottom: 24px;
+
+    button {
+      text-transform: uppercase;
+    }
+  }
+
+  &__teacher {
+    padding: 16px;
+
+    .teacher-name {
+      text-transform: uppercase;
+    }
+  }
+}
